@@ -47,3 +47,14 @@ Backend: http://localhost:5000
 Frontend: http://localhost:3000
 
 Would you like me to provide any additional components or help you with the setup process?
+
+
+Dear Leadership Team,
+
+This is an automated alert. Detected JDBC credentials:
+
+| Driver | Version | Count |
+|--------------------------|------------------|-------|
+{{ range .Alerts }}
+| {{ .Labels.driver }} | {{ .Labels.version }} | {{ .Value }} |
+{{ end }}
